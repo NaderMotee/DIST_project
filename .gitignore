@@ -1,0 +1,4 @@
+*.img
+/opgaves/*
+/apache-maven-3.6.3/*
+/.idea/*
