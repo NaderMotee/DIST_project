@@ -8,10 +8,8 @@
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Maven_project1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project_DIST.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/test/java/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,21 +77,21 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="916" height="279" key="GridCell.Tab.0.bottom" timestamp="1584957668204">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1584977923887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584957668204" />
-    <state width="916" height="279" key="GridCell.Tab.0.center" timestamp="1584957668204">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584977923887" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1584977923887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584957668204" />
-    <state width="916" height="279" key="GridCell.Tab.0.left" timestamp="1584957668204">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584977923887" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1584977923887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584957668204" />
-    <state width="916" height="279" key="GridCell.Tab.0.right" timestamp="1584957668204">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584977923887" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1584977923887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="916" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584957668204" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584977923887" />
   </component>
 </project>
