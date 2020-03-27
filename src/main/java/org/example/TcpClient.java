@@ -14,7 +14,7 @@ public class TcpClient {
         byte[] contents = new byte[10000];
 
         //Initialize the FileOutputStream to the output file's full path.
-        FileOutputStream fos = new FileOutputStream("ReceivedData.pdf");
+        FileOutputStream fos = new FileOutputStream("Data/ReceivedData.pdf");
         BufferedOutputStream bos = new BufferedOutputStream(fos);
         InputStream is = socket.getInputStream(); // I want to receive a file from the server.
 

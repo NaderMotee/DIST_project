@@ -18,7 +18,7 @@ public class TcpServer {
         InetAddress serverIP = InetAddress.getByName("localhost"); // 127.0.0.1
 
         //Specify the file
-        File file = new File("document.pdf");
+        File file = new File("Data/document.pdf");
         FileInputStream fis = new FileInputStream(file); // Reads bytes from the file.
         BufferedInputStream bis = new BufferedInputStream(fis); // Gives extra functionality to fileInputStream so it can buffer data.
 
@@ -42,7 +42,7 @@ public class TcpServer {
             contents = new byte[size];
             bis.read(contents, 0, size);
             os.write(contents);
-            System.out.print("Sending file ... "+(current*100)/fileLength+"% complete!");
+            System.out.println("Sending file ... "+(current*100)/fileLength+"% complete!");
         }
 
         os.flush();
