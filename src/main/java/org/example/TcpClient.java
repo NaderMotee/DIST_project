@@ -9,7 +9,7 @@ public class TcpClient {
     public static void main(String[] args) throws Exception{
         //Initialize socket
         System.out.println("Client started working.");
-        Socket socket = new Socket("host2", 5000);
+        Socket socket = new Socket(InetAddress.getByName("host2"), 5000);
         byte[] contents = new byte[10000];
 
         //Initialize the FileOutputStream to the output file's full path.
