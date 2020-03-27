@@ -9,6 +9,7 @@ public class TcpClient {
     public static void main(String[] args) throws Exception{
         //Initialize socket
         System.out.println("Client started working.");
+        System.out.println(InetAddress.getByName("host2"));
         Socket socket = new Socket(InetAddress.getByName("host2"), 5000);
         byte[] contents = new byte[10000];
 
