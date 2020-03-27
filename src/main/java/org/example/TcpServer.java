@@ -18,7 +18,7 @@ public class TcpServer {
         InetAddress serverIP = InetAddress.getByName("localhost"); // 127.0.0.1
 
         //Specify the file
-        File file = new File("Cloud_access_-_Group_8.pdf");
+        File file = new File("document.pdf");
         FileInputStream fis = new FileInputStream(file); // Reads bytes from the file.
         BufferedInputStream bis = new BufferedInputStream(fis); // Gives extra functionality to fileInputStream so it can buffer data.
 
