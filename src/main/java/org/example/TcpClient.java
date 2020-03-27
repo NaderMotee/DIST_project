@@ -12,15 +12,15 @@ public class TcpClient {
         byte[] contents = new byte[10000];
 
         //Initialize the FileOutputStream to the output file's full path.
-        FileOutputStream fos = new FileOutputStream("e:\\data2.bin");
+        FileOutputStream fos = new FileOutputStream("../../../../Data/ReceivedData.pdf");
         BufferedOutputStream bos = new BufferedOutputStream(fos);
-        InputStream is = socket.getInputStream();
+        InputStream is = socket.getInputStream(); // I want to receive a file from the server.
 
-        //No of bytes read in one read() call
+        //Number of bytes read in one read() call
         int bytesRead = 0;
 
-        while((bytesRead=is.read(contents))!=-1)
-            bos.write(contents, 0, bytesRead);
+        while((bytesRead=is.read(contents))!=-1) // -1 ==> no data left to read.
+            bos.write(contents, 0, bytesRead); // content, offset, how many bytes are read.
 
         bos.flush();
         socket.close();
