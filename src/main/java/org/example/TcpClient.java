@@ -9,11 +9,11 @@ public class TcpClient {
     public static void main(String[] args) throws Exception{
         //Initialize socket
         System.out.println("Client started working.");
-        Socket socket = new Socket("127.0.0.1", 5000);
+        Socket socket = new Socket("host2", 5000);
         byte[] contents = new byte[10000];
 
         //Initialize the FileOutputStream to the output file's full path.
-        FileOutputStream fos = new FileOutputStream("../../../../Data/ReceivedData.pdf");
+        FileOutputStream fos = new FileOutputStream("ReceivedData.pdf");
         BufferedOutputStream bos = new BufferedOutputStream(fos);
         InputStream is = socket.getInputStream(); // I want to receive a file from the server.
 
