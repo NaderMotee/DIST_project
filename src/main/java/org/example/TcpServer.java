@@ -10,6 +10,7 @@ import java.net.Socket;
 public class TcpServer {
     public static void main(String[] args) throws Exception {
         //Initialize Sockets
+        System.out.println("Server started working.");
         ServerSocket serverSocket = new ServerSocket(5000);
         Socket clientSocket = serverSocket.accept();
 

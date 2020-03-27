@@ -8,6 +8,7 @@ import java.net.Socket;
 public class TcpClient {
     public static void main(String[] args) throws Exception{
         //Initialize socket
+        System.out.println("Client started working.");
         Socket socket = new Socket(InetAddress.getByName("localhost"), 5000);
         byte[] contents = new byte[10000];
 
