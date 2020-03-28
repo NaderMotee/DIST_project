@@ -31,11 +31,17 @@ public class UdpClient {
         DatagramPacket receivedPacket = new DatagramPacket(receivedContent, size);
         clientSocket.receive(receivedPacket); // Receive first packet so the application can check if its not empty.
         String received = new String(receivedPacket.getData(), 0, receivedPacket.getLength());
+
         while(received.length() >= size){ // As long as you receive the max size stay in the while loop. The last time you'll receive something < 10000
+            bytesRead += size;
             bos.write(receivedContent);
             clientSocket.receive(receivedPacket);
+            received = new String(receivedPacket.getData(), 0, receivedPacket.getLength());
+            System.out.println("tot Bytes send: " + bytesRead + " length: " + received.length());
         }
         if(received.length() > 0){ // if the last time you've received something 10000>x>0, this needs to be written away.
+            bytesRead += received.length();
+            System.out.println("tot Bytes send: " + bytesRead + " length: " + received.length());
             bos.write(receivedContent);
         }
         bos.flush();
