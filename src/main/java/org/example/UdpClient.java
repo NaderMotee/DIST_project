@@ -35,9 +35,11 @@ public class UdpClient {
         while(received.length() >= size){ // As long as you receive the max size stay in the while loop. The last time you'll receive something < 10000
             bytesRead += size;
             bos.write(receivedContent);
+            System.out.println("Written");
             clientSocket.receive(receivedPacket);
+            System.out.println("next received");
             received = new String(receivedPacket.getData(), 0, receivedPacket.getLength());
-            System.out.println("tot Bytes send till here: " + bytesRead + " next length: " + received.length());
+            System.out.println("tot Bytes sent till here: " + bytesRead + " next length: " + received.length());
         }
         if(received.length() > 0){ // if the last time you've received something 10000>x>0, this needs to be written away.
             bytesRead += received.length();
