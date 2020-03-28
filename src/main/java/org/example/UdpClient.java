@@ -37,13 +37,13 @@ public class UdpClient {
             bos.write(receivedContent);
             clientSocket.receive(receivedPacket);
             received = new String(receivedPacket.getData(), 0, receivedPacket.getLength());
-            System.out.println("tot Bytes send: " + bytesRead + " length: " + received.length());
+            System.out.println("tot Bytes send till here: " + bytesRead + " next length: " + received.length());
         }
         if(received.length() > 0){ // if the last time you've received something 10000>x>0, this needs to be written away.
             bytesRead += received.length();
-            System.out.println("tot Bytes send: " + bytesRead + " length: " + received.length());
             bos.write(receivedContent);
         }
+        System.out.println("tot Bytes send: " + bytesRead);
         bos.flush();
         clientSocket.close();
         bos.close();
