@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.net.InetAddress;
 import java.net.Socket;
 
-public class TcpClient {
+public class UdpClient {
     public static void main(String[] args) throws Exception{
         //Initialize socket
         System.out.println("Client started working.");

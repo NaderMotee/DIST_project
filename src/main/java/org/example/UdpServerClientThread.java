@@ -9,13 +9,13 @@ import java.net.Socket;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.ExecutorService;
 
-public class TcpServerClientThread extends Thread{
+public class UdpServerClientThread extends Thread{
     Socket clientSocket;
     int clientNo;
     Semaphore readSem;
     Semaphore writeSem;
 
-    TcpServerClientThread(Socket inSocket,int counter){
+    UdpServerClientThread(Socket inSocket, int counter){
         clientSocket = inSocket;
         clientNo=counter;
         readSem = new Semaphore(1);
