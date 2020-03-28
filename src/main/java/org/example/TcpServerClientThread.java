@@ -6,15 +6,22 @@ import java.io.OutputStream;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.ExecutorService;
 
 public class TcpServerClientThread extends Thread{
     Socket clientSocket;
     int clientNo;
+    Semaphore readSem;
+    Semaphore writeSem;
 
     TcpServerClientThread(Socket inSocket,int counter){
         clientSocket = inSocket;
         clientNo=counter;
+        readSem = new Semaphore(1);
+        writeSem = new Semaphore(1);
     }
+
     public void run(){
         try{
             //The InetAddress specification
@@ -30,7 +37,9 @@ public class TcpServerClientThread extends Thread{
 
             //Read File Contents into contents array
             byte[] contents;
+            readSem.acquire();
             long fileLength = file.length();
+            readSem.release();
             long current = 0;
 
             long start = System.nanoTime();
@@ -43,8 +52,12 @@ public class TcpServerClientThread extends Thread{
                     current = fileLength;
                 }
                 contents = new byte[size];
+                readSem.acquire();
                 bis.read(contents, 0, size);
+                readSem.release();
+                writeSem.acquire();
                 os.write(contents);
+                writeSem.release();
                 System.out.println("Sending file ... "+(current*100)/fileLength+"% complete!");
             }
 
