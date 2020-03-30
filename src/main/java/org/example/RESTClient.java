@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 // REST java client application. The client will get a text menu with different options. This version does not implement passwords
 // since this is not the goal of this exercise
-public class RESTclient {
+public class RESTClient {
     public static void main(String[] args) throws IOException{
 
         Scanner scanner = new Scanner(System.in);
