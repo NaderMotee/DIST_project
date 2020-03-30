@@ -15,7 +15,7 @@ public class AccountServlet extends HttpServlet {
 
         String requestUrl = request.getRequestURI();
         //Extract accountName from the URL
-        String accountName = requestUrl.substring("/UserService/getUser/".length());
+        String accountName = requestUrl.substring("/bankService/".length());
 
         Account account = BankData.getInstance().getAccount(accountName);
 
