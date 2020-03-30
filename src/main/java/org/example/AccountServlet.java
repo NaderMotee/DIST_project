@@ -36,7 +36,7 @@ public class AccountServlet extends HttpServlet {
 
 
     @Override
-    //Add a new account to the database
+    //POST method, accountName and balance get inserted into hashmap
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
         String accountName = request.getParameter("accountName");

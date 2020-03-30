@@ -18,17 +18,6 @@ public class Account {
         return balance;
     }
 
-    public void addMoney(int amount) {
-        balance += amount;
 
-    }
-
-    public int takeMoney(int amount) {
-        if (amount > balance) {
-            return -1; //InsufficientResources
-        }
-        balance -= amount;
-        return 0;
-    }
 
 }
