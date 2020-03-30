@@ -10,10 +10,11 @@ import org.json.JSONObject;
 public class AccountServlet extends HttpServlet {
 
     @Override
+    //get the balnce of the requested account
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
         String requestUrl = request.getRequestURI();
-
+        //Extract accountName from the URL
         String accountName = requestUrl.substring("/UserService/getUser/".length());
 
         Account account = BankData.getInstance().getAccount(accountName);
@@ -27,13 +28,14 @@ public class AccountServlet extends HttpServlet {
         }
         else{
             //account not found, return error message
-            response.getOutputStream().println("{}");
+            response.getOutputStream().println("account not found!");
         }
     }
 
 
 
     @Override
+    //Add a new account to the database
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
         String accountName = request.getParameter("accountName");

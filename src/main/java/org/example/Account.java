@@ -1,6 +1,5 @@
 package org.example;
 
-import javax.naming.InsufficientResourcesException;
 
 public class Account {
     private String accountName;
